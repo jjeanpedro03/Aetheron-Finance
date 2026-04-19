@@ -1,73 +1,78 @@
-# React + TypeScript + Vite
+# 🌌 Aetheron Finance — Dashboard de Câmbio em Tempo Real
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+O **Aetheron Finance** é uma plataforma de monitoramento cambial e gestão de margem operacional (Spread), desenvolvida para oferecer uma experiência de trading moderna, reativa e de alta performance.
 
-Currently, two official plugins are available:
+Este projeto foi totalmente desenvolvido por mim, **Jean Pedro**, como parte do meu ecossistema de soluções Full Stack.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+---
 
-## React Compiler
+## 🎥 Demonstração em Vídeo
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+Confira abaixo o funcionamento do sistema, incluindo o ajuste de spread em tempo real, a atualização dos gráficos e o fluxo de negociação de ativos:
 
-## Expanding the ESLint configuration
+![Demonstração Aetheron Finance](./public/demonstracao-aetheron.gif)
+> *Nota: Caso o GIF acima não carregue, você pode visualizar o vídeo completo na pasta `/public` ou acessar o link de deploy.*
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+---
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+## 🎯 Objetivo
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+O Aetheron Finance foi criado para solucionar a necessidade de visualização clara de lucros operacionais em transações de câmbio. O foco principal foi a manipulação de dados em tempo real e a construção de uma interface "Dark Terminal" que transmita confiança e precisão técnica ao usuário final.
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+## 🚀 Sobre o Projeto
+
+Uma interface fintech robusta que permite ao administrador ajustar margens de lucro (Spread) e visualizar instantaneamente o impacto nos preços de venda através de gráficos analíticos triplos e reativos.
+
+* ⚡ **Gráficos Preditivos:** Visualização simultânea de Taxa Atual, Projeção de Alta (Resistência) e Projeção de Queda (Suporte).
+* 🎚️ **Engine de Margem:** Slider interativo que recalcula todo o dashboard em tempo real via Spread dinâmico.
+* 📱 **Interface Ultra-Moderna:** Design focado em UX, utilizando Tailwind CSS para um visual sóbrio, profissional e responsivo.
+* 📡 **Consumo de API Real-time:** Integração de dados históricos e atuais consumidos de serviços financeiros.
+
+## 🛠️ Tecnologias Utilizadas
+
+![Tecnologias](https://skillicons.dev/icons?i=react,ts,tailwind,nestjs,postgres,vite,git)
+
+* **React & Vite:** SPA (Single Page Application) focada em velocidade e experiência de desenvolvimento.
+* **TypeScript:** Tipagem rigorosa para garantir segurança em operações financeiras.
+* **NestJS & PostgreSQL:** Backend escalável para processamento de logs e integração de dados.
+* **Recharts:** Biblioteca de gráficos customizada para alcançar o visual estilo "Google Finance".
+* **Tailwind CSS:** Estilização utilitária para uma interface customizada em modo Dark.
+
+## 💡 Diferenciais Técnicos
+
+* 🧠 **Memoization Progressiva:** Aplicação de `useMemo` para garantir performance estável (60 FPS) durante a interação com o slider de margem.
+* 🎨 **Custom Tooltip System:** Dicas flutuantes com efeito de vidro fosco (Backdrop Blur) e informações localizadas em Português (PT-BR).
+* 🛡️ **Resiliência de Dados:** Tratamento inteligente de falhas de rede e normalização automática de timestamps de diferentes provedores.
+
+## 💻 Como Executar o Projeto
 ```
+### 1. Pré-requisitos
+Antes de começar, você precisará ter instalado em sua máquina:
+* **Node.js** (Versão 18 ou superior)
+* **npm** ou **yarn**
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+### 2. Instalação
+Clone o repositório e instale as dependências:
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+bash
+# Acesse a pasta do projeto
+cd fintech-dashboard
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+# Instale as dependências
+npm install
+3. Execução
+Para rodar o projeto em ambiente de desenvolvimento:
+
+Bash
+npm run dev
+Após o comando, o Vite abrirá uma porta local (geralmente http://localhost:5173). Basta acessar este endereço no seu navegador.
+
+📂 Estrutura do Projeto
+Plaintext
+├── src/
+│   ├── components/       # Componentes modulares (HistoryChart, Card, Slider)
+│   ├── hooks/            # Hooks customizados (useHistory para fetch de dados)
+│   ├── utils/            # Lógica de cálculo (Finance Engine) e formatadores
+│   └── App.tsx           # Ponto de entrada e orquestração do layout
+├── public/               # Ativos estáticos e vídeo de demonstração
+└── tailwind.config.js    # Customização da paleta de cores Aetheron
