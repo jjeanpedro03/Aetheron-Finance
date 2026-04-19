@@ -10,8 +10,9 @@ Este projeto foi totalmente desenvolvido por mim, **Jean Pedro**, como parte do 
 
 Confira abaixo o funcionamento do sistema, incluindo o ajuste de spread em tempo real, a atualização dos gráficos e o fluxo de negociação de ativos:
 
-![Demonstração Aetheron Finance](./public/demonstracao-aetheron.gif)
-> *Nota: Caso o GIF acima não carregue, você pode visualizar o vídeo completo na pasta `/public` ou acessar o link de deploy.*
+<p align="center">
+  <video src="./img/demonstracao-aetheron.mp4" width="700px" controls autoplay loop muted style="border-radius: 10px; border: 2px solid #1e293b;"></video>
+</p>
 
 ---
 
