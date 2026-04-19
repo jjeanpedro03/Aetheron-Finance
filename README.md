@@ -11,7 +11,7 @@ Este projeto foi totalmente desenvolvido por mim, **Jean Pedro**, como parte do 
 Confira abaixo o funcionamento do sistema, incluindo o ajuste de spread em tempo real, a atualização dos gráficos e o fluxo de negociação de ativos:
 
 <p align="center">
-  <video src="./img/demonstracao-aetheron.mp4" width="700px" controls autoplay loop muted style="border-radius: 10px; border: 2px solid #1e293b;"></video>
+  <img src="./img/demonstracao-aetheron.gif" width="700px"/>
 </p>
 
 ---
