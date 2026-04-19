@@ -31,7 +31,9 @@ Uma interface fintech robusta que permite ao administrador ajustar margens de lu
 
 ## 🛠️ Tecnologias Utilizadas
 
-![Tecnologias](https://skillicons.dev/icons?i=react,ts,tailwind,nestjs,postgres,vite,git)
+<p align="left">
+  <img src="https://skillicons.dev/icons?i=ts,nestjs,postgres,react,vite,tailwind,git" height="40px" />
+</p>
 
 * **React & Vite:** SPA (Single Page Application) focada em velocidade e experiência de desenvolvimento.
 * **TypeScript:** Tipagem rigorosa para garantir segurança em operações financeiras.
