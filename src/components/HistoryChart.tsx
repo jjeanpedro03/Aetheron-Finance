@@ -71,7 +71,6 @@ export function HistoryChart({ pair, spread, color = '#10b981' }: HistoryChartPr
         data={chartData} 
         margin={{ top: 5, right: 5, left: -60, bottom: 5 }}
       >
-        {}
         <CartesianGrid strokeDasharray="3 3" vertical={false} stroke="#1e293b" opacity={0.2} />
         
         <XAxis dataKey="time" hide />
@@ -83,7 +82,6 @@ export function HistoryChart({ pair, spread, color = '#10b981' }: HistoryChartPr
           isAnimationActive={false} 
         />
 
-        {}
         <Line 
           type="monotone" 
           dataKey="highProjection" 
@@ -95,7 +93,6 @@ export function HistoryChart({ pair, spread, color = '#10b981' }: HistoryChartPr
           isAnimationActive={false}
         />
 
-        {}
         <Line 
           type="monotone" 
           dataKey="lowProjection" 
@@ -107,7 +104,6 @@ export function HistoryChart({ pair, spread, color = '#10b981' }: HistoryChartPr
           isAnimationActive={false}
         />
 
-        {}
         <Line 
           key={`aetheron-line-${spread}`}
           type="monotone" 

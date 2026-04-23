@@ -1,5 +1,5 @@
 import { create } from 'zustand';
-import { persist, createJSONStorage } from 'zustand/middleware'; 
+import { persist, createJSONStorage } from 'zustand/middleware';
 
 interface CurrencyState {
   rates: Record<string, any>;
@@ -16,9 +16,9 @@ export const useCurrencyStore = create<CurrencyState>()(
       setRates: (rates) => set({ rates }),
       setUserSpread: (userSpread) => set({ userSpread }),
     }),
-    { 
-      name: 'aetheron-storage', 
-      storage: createJSONStorage(() => localStorage), 
+    {
+      name: 'aetheron-storage',
+      storage: createJSONStorage(() => localStorage),
     }
   )
 );
