@@ -1,0 +1,15 @@
+@import "tailwindcss";
+
+:root {
+  background-color: #020617;
+}
+
+#root {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.grid > div {
+  min-width: 320px;
+}
