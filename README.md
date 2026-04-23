@@ -4,6 +4,14 @@ O **Aetheron Finance** é uma plataforma de monitoramento cambial e gestão de m
 
 Este projeto foi totalmente desenvolvido por mim, **Jean Pedro**, como parte do meu ecossistema de soluções Full Stack.
 
+<br>
+
+<p align="center">
+  <a href="https://aetheron-finance.vercel.app/" target="_blank">
+    <img src="https://img.shields.io/badge/🚀%20Visualizar%20Projeto-10b981?style=for-the-badge&logo=vercel&logoColor=white">
+  </a>
+</p>
+
 ---
 
 ## 🎥 Demonstração em Vídeo
